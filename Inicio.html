@@ -17,9 +17,7 @@
     <div class="container header-inner">
       <img src="./imagenes/ISOLOGO METALCRIS LETRA BLANCA.png" alt="Logo" class="logo">
       <!-- Botón Menú solo visible en celular -->
- <button class="menu-toggle" id="menuToggle">☰ Menú</button>
-
-
+      <button class="menu-toggle" id="menuToggle">☰ Menú</button>
       <nav class="navbar">
         <ul class="menu">
           <li><a href="Inicio.html">Inicio</a></li>
@@ -131,15 +129,15 @@ Nuestra calidad, experiencia y tecnología nos permiten ofrecer soluciones confi
 
   <!-- Accesos rápidos -->
   <section class="accesos">
-    <a href="productos.html">
+    <a href="Productos.html">
       <img src="imagenes/header.jpg" alt="Productos">
       <span>Productos</span>
     </a>
-    <a href="empresa.html">
+    <a href="Empresa.html">
       <img src="imagenes/Empresa3.png" alt="Empresa">
       <span>Empresa</span>
     </a>
-    <a href="contacto.html">
+    <a href="Contacto.html">
       <img src="imagenes/contacto persona.jpg" alt="Contacto">
       <span>Contacto</span>
     </a>
@@ -295,13 +293,25 @@ Nuestra calidad, experiencia y tecnología nos permiten ofrecer soluciones confi
     const toggle = document.getElementById("menuToggle");
     const menu = document.querySelector(".menu");
 
-    toggle.addEventListener("click", function () {
-      menu.classList.toggle("show");
-    });
+    // Chequeamos que ambos elementos existan para evitar errores
+    if (toggle && menu) {
+      
+      // 1. Abre y cierra el menú con el botón principal
+      toggle.addEventListener("click", function () {
+        menu.classList.toggle("show");
+      });
+
+      // 2. Cierra el menú automáticamente al hacer clic en un enlace de adentro
+      const menuLinks = menu.querySelectorAll("a");
+      menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          // Usamos .remove() para asegurarnos de que el menú siempre se cierre
+          menu.classList.remove("show");
+        });
+      });
+    }
   });
 </script>
-
-
 
 </body>
 </html>

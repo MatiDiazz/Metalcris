@@ -1950,9 +1950,10 @@ input[type="tel"] {
 
 
 
-  .menu-toggle {
-    display: block;
-  }
+.menu-toggle {
+  display: none;
+}
+
 /* Solo para móviles */
 @media (max-width: 768px) {
   .header-inner {
@@ -1966,7 +1967,7 @@ input[type="tel"] {
   }
 
   .menu-toggle {
-    display: block;
+    display: block; /* mostrar solo en móvil */
     background: none;
     border: none;
     color: white;
@@ -1985,7 +1986,7 @@ input[type="tel"] {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    display: none; /* Oculto por defecto */
+    display: none; /* oculto por defecto */
     background-color: #222;
     padding: 10px 0;
     border-top: 1px solid #444;
@@ -2004,9 +2005,4 @@ input[type="tel"] {
     font-size: 14px;
     color: white;
   }
-}
-
-/* Escondemos el botón fuera de móvil */
-.menu-toggle {
-  display: none;
 }
