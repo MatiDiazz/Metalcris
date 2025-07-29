@@ -16,6 +16,10 @@
   <header class="header" id="mainHeader">
     <div class="container header-inner">
       <img src="./imagenes/ISOLOGO METALCRIS LETRA BLANCA.png" alt="Logo" class="logo">
+      <!-- Botón Menú solo visible en celular -->
+ <button class="menu-toggle" id="menuToggle">☰ Menú</button>
+
+
       <nav class="navbar">
         <ul class="menu">
           <li><a href="Inicio.html">Inicio</a></li>
@@ -282,6 +286,22 @@ Nuestra calidad, experiencia y tecnología nos permiten ofrecer soluciones confi
     }, 500); // tiempo de fade out
   }, 3000); // cada 3 segundos cambia
 </script>
+
+
+
+<!--Media query-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menuToggle");
+    const menu = document.querySelector(".menu");
+
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("show");
+    });
+  });
+</script>
+
+
 
 </body>
 </html>
