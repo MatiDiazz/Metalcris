@@ -1,0 +1,2008 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía y base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  background-image: url("imagenes/fondo\ trama.jpg");
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+a {
+  color: #DD6840;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal ----------------------------------------------------*/
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Encabezado --------------------------------------------------------------*/
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #222;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid #CACACA;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0; /* altura normal */
+  transition: padding 0.3s ease;
+}
+
+.logo {
+  height: 50px;
+  transition: height 0.3s ease;
+}
+
+.header.shrink .header-inner {
+  padding: 10px 0; /* se achica */
+}
+
+.header.shrink .logo {
+  height: 35px;
+}
+
+.navbar {
+  background: #584F5080; /* Color madera o marrón oscuro */
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  font-weight: bold;
+  color: #5B5B5B;
+  border-bottom: 1px solid #333;
+}
+
+.navbar a.active {
+  color: #DD6840;
+}
+
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  margin: 0;
+  padding: 0 15px;
+  border-left: 1px solid #ccc;
+}
+
+.menu li:first-child {
+  border-left: none; /* No poner línea a la izquierda del primero */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.menu a:hover {
+  color: #DD6840; /* Color del texto al pasar el mouse */
+  background-color: rgba(255, 255, 255, 0.945); /* Fondo sutil con transparencia */
+  border-radius: 4px; /* Opcional: bordes redondeados para un look más moderno */
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+  outline: 2px solid white;
+}
+
+/*Footer------------------------------------------------------------------------*/
+
+.footer {
+  background-color: #0033a0;
+  color: #DD6840;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  flex: 1 1 200px;
+  text-align: left;
+}
+.footer-logo img {
+  width: 120px;
+  align-items: center;
+}
+.footer-logo .slogan {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-weight: 300;
+  align-items:  center;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+}
+.footer-col h4 {
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #DD6840;
+  font-size: 1.2rem;
+
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+.footer-col ul li a {
+  color: white;
+  text-decoration: none;
+}
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.fab.fa-linkedin-in:hover {
+  color: #0077b5; /* Azul LinkedIn */
+}
+
+.fab.fa-whatsapp:hover {
+  color: #25D366; /* Verde WhatsApp */
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+}
+.footer-bottom a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Pie de página */
+.footer {
+  background-color: #1E1E1E;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #CACACA;
+}
+
+
+
+
+
+
+
+
+
+/*INICIO--------------------------------------------------------------------------*/
+
+
+#videoCarousel {
+  max-width: 100%;
+  margin: auto;
+  height: 400px;
+}
+
+.carousel-item video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carousel-inner {
+  max-height: 400px;
+}
+
+
+.mensaje-dinamico {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #DD6840;
+  margin-top: 30px;
+  min-height: 50px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.carrusel-con-overlay {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.overlay-texto {
+  min-width: 260px;/* ajustá según el texto más largo */
+  text-align: center;
+  white-space: nowrap; /* evita que salte de línea */
+  position: absolute;
+  bottom: 20px;     /* espacio desde abajo */
+  left: 20px;       /* espacio desde la izquierda */
+  color: #DD6840;   /* tu color institucional */
+  font-size: 2.2rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.85); /* más claro si lo querés legible */
+  padding: 12px 24px;
+  border-radius: 12px;
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+
+#frase-rotativa {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.overlay-texto {
+  backdrop-filter: blur(6px);
+
+}
+/* Sección Hero */
+.carousel-slide {
+  position: relative;
+  height: 400px; /* Ajustalo según tu diseño */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  border-style: dashed;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 19.6px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 2.6em;
+}
+
+
+.banner-texto {
+  background-color: #CACACA; /* Azul profundo */
+  color: #333;
+  text-align: center;
+  padding: 40px 20px; /* Espaciado interno */
+  width: 100%;
+  font-size: 1.25rem; /* Ajustá según necesidad */
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Banner / Hero */
+.hero {
+  background: url('banner-metal.jpg') center center/cover no-repeat;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.cta .btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #8b4513;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  margin: 0 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cta .btn:hover {
+background: #333; /* Un cobre más oscuro al pasar el mouse */
+
+}
+
+.btn-secundario {
+  background-color: #8b4513;
+  border: 2px solid #fff;
+}
+
+.btn-secundario:hover {
+  background-color: #fff;
+  color: #0033a0;
+}
+
+/* Accesos rápidos */
+.accesos {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 20px;
+  background: #f5f7fb;
+}
+
+.accesos a {
+  text-align: center;
+  text-decoration: none;
+  color: #8b4513;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.accesos a img {
+  width: 160px; /* Más grande */
+  height: 160px; /* Altura igual al ancho para hacer círculo */
+  object-fit: cover; /* Ajusta la imagen dentro del círculo */
+  border-radius: 50%; /* Hace la imagen redonda */
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accesos a:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Marcas / Clientes */
+.carrusel-marcas {
+  background-color: #b44f3e; /* Color de fondo según CMYK */
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carrusel-marcas h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(200px * 20); /* 10 imágenes * 2 veces */
+  animation: scroll 40s linear infinite;
+}
+
+.slider img {
+  height: 80px;
+  width: auto;
+  margin: 0 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.slider img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+
+
+
+
+
+
+/*EMPRESA-------------------------------------------------------------------------*/
+
+h1, h2 {
+  color: #ca6d4e;
+  text-align: center;
+}
+
+.empresa-video-carousel2 {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel2 {
+  display: flex;
+  width: 400%; /* 4 videos */
+  height: 400px;
+  animation: slideVideos 20s infinite;
+}
+
+.carousel2 video {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@keyframes slideVideos {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(0); }
+  30% { transform: translateX(-100vw); }
+  55% { transform: translateX(-100vw); }
+  60% { transform: translateX(-200vw); }
+  85% { transform: translateX(-200vw); }
+  90% { transform: translateX(-300vw); }
+  100% { transform: translateX(-300vw); }
+}
+
+.empresa-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  max-width: 800px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+
+.empresa-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+}
+
+.empresa-info ul {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+}
+
+.empresa-info li::before {
+  content: '▶';
+  color: #0033a0;
+  margin-right: 10px;
+}
+.contenedor-circular {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #ca6d4e;
+  flex-shrink: 0;
+}
+
+.contenedor-circular img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.valores {
+  padding: 60px 10%;
+  background: #ffffff;
+}
+
+.valores-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.valores-texto {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 40px;
+}
+
+.valores-texto h2 {
+  color: #ca6d4e;
+  margin-bottom: 10px;
+}
+
+.valores-director {
+  flex: 0 0 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.frase-director {
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.nombre-director,
+.cargo-director {
+  margin: 5px 0;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.img-circular {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ca6d4e;
+}
+
+
+.equipo {
+  padding: 60px 10%;
+  background: #f4f4f4;
+  box-sizing: border-box;
+}
+
+.titulo-equipo {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ca6d4e; /* color parecido a tu borde */
+  font-weight: bold;
+}
+
+.contenido-equipo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.texto-competencias {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 40px;
+}
+
+.texto-competencias p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.competencias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.competencias h3 {
+  width: 100%;
+  margin-bottom: 15px;
+  color: #ca6d4e;
+}
+
+.competencias button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #e6e9f8;
+  color: #8b4513;
+  font-weight: bold;
+  cursor: default;
+}
+
+.sumate {
+  flex: 0 0 300px; /* ancho fijo para la imagen y texto */
+  position: relative;
+  text-align: center;
+}
+
+.sumate img.img-circular {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid #ca6d4e;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.sumate-overlay {
+  background: #ca6d4e;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.sumate-overlay h3 {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.btn-cv {
+  display: inline-block;
+  margin-top: 10px;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nombre-director,
+.cargo-director {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+
+.etica {
+  padding: 60px 10%;
+}
+
+.etica-contenido {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.etica-contenido img {
+  width: 350px;
+  border-radius: 12px;
+}
+
+.btn-etica {
+  display: inline-block;
+  margin-top: 10px;
+  background: #0033a0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.sgi {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.pilares {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.pilares button {
+  background: #e6e9f8;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 25px;
+  color: #8b4513;
+  font-weight: bold;
+}
+
+.certificados {
+  margin-top: 30px;
+  width: 200px;
+}
+
+.btn-certificado {
+  background-color: #ca6d4e; /* color corporativo */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-certificado:hover {
+  background-color: #a6543b; /* tono más oscuro al pasar el mouse */
+}
+
+
+
+
+
+/*Productos---------------------------------------------------------------------*/
+
+.empresa-video-carousel2 {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel2 {
+  display: flex;
+  width: 400%; /* 4 videos */
+  height: 100%;
+  animation: slideVideos 20s infinite;
+}
+
+.carousel2 video {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@keyframes slideVideos {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(0); }
+  30% { transform: translateX(-100vw); }
+  55% { transform: translateX(-100vw); }
+  60% { transform: translateX(-200vw); }
+  85% { transform: translateX(-200vw); }
+  90% { transform: translateX(-300vw); }
+  100% { transform: translateX(-300vw); }
+}
+
+.empresa-overlay2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  max-width: 800px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Estilos base (aplican por defecto, generalmente para pantallas de escritorio o grandes) */
+.catalogo {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.contenedor-columnas {
+    display: grid; /* Usamos Grid para las dos columnas principales (Cobre y Latón) */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 50px; /* Espacio entre las columnas principales */
+    border-left: 2px solid #ca6d4e;
+    border-right: 2px solid #ca6d4e;
+    padding: 0 25px;
+    justify-content: center; /* Centra el contenido si hay espacio extra */
+    max-width: 1400px; /* Ancho máximo para el contenedor de columnas */
+    margin: 0 auto; /* Centrar el contenedor en la página */
+}
+
+/* Añadir borde divisor entre las dos columnas principales (Cobre y Latón) */
+/* Este borde se aplica a la columna de Latón, a su izquierda */
+.contenedor-columnas > .columna:last-child {
+    border-left: 2px solid #ca6d4e;
+    padding-left: 45px; /* Ajusta este valor si necesitas más o menos espacio */
+}
+
+/* Y asegurarse de que se desactiva en tablet/móvil */
+@media (max-width: 1023px) {
+    .contenedor-columnas > .columna:last-child {
+        border-left: none;
+        padding-left: 0; /* O el padding por defecto para móviles si tenías uno */
+    }
+    /* ... el resto de tus estilos para tablet ... */
+}
+
+
+
+
+
+/* Las columnas individuales no necesitan borde derecho si el contenedor ya es un grid con gap */
+.columna {
+    padding: 0 20px;
+    /* max-width se controla mejor a través del grid-template-columns del padre */
+}
+
+.columna h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    text-align: center; /* Asegura que el título esté centrado en su columna */
+}
+
+.cobre {
+    color: #b87333; /* Color cobre */
+}
+
+.laton {
+    color: #bfa14a; /* Color latón */
+}
+
+/* Contenedor interno para los productos dentro de cada columna de Cobre/Latón */
+.productos-grid-interno {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columnas para los productos */
+    gap: 25px; /* Espacio entre productos */
+    justify-items: center; /* Centra los items en la celda del grid */
+    align-items: start; /* Alinea los items al inicio de la celda */
+}
+
+.producto {
+    display: flex;
+    flex-direction: column; /* Cambiado a columna por defecto para mejor adaptabilidad */
+    align-items: center; /* Centra los items verticalmente si es column */
+    gap: 15px;
+    margin-bottom: 0; /* Ya no es necesario margin-bottom en producto individual si hay gap en el grid */
+    background: #f5f7fb;
+    padding: 15px; /* Aumentado padding para el diseño hexagonal */
+    border-radius: 8px;
+    text-align: center; /* Centra el texto del producto */
+    width: 100%; /* Ocupa todo el ancho de su celda en el grid */
+    max-width: 280px; /* Establece un ancho máximo para cada producto */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto */
+}
+
+
+/* Estilos para las imágenes hexagonales */
+.img-hexagonal1,
+.img-hexagonal2 {
+    width: 180px; /* Ajustado para que quepa bien en dos columnas por fila en tamaños intermedios */
+    height: 180px;
+    object-fit: cover;
+    shape-outside: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform 0.3s ease;
+}
+
+.img-hexagonal1 {
+    border: 4px solid #ca6d4e; /* Borde color cobre */
+}
+
+.img-hexagonal2 {
+    border: 4px solid #bfa14a; /* Borde color latón */
+}
+
+.producto:hover .img-hexagonal1,
+.producto:hover .img-hexagonal2 {
+    transform: scale(1.07);
+}
+
+.producto .info {
+    text-align: center; /* Centrado para el nuevo layout de columna del producto */
+    flex: none; /* No necesitamos flex-grow aquí */
+}
+
+.producto p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold; /* Hacer los nombres de producto un poco más prominentes */
+}
+
+/* Estilos para los enlaces de descarga de ficha técnica */
+.link-ficha-cobre {
+    display: inline-block;
+    margin-top: 10px; /* Aumentado un poco el margen superior */
+    font-size: 0.8rem;
+    color: white; /* Texto blanco para mejor contraste */
+    background: #b87333; /* Color cobre para el fondo */
+    padding: 8px 15px; /* Ajustado padding */
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.link-ficha-cobre:hover {
+    background: #8b4513; /* Un cobre más oscuro al pasar el mouse */
+    color: white;
+}
+
+.link-ficha-laton {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: white; /* Texto blanco para mejor contraste */
+    background: #bfa14a; /* Color latón para el fondo */
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.link-ficha-laton:hover {
+    background: #a08132; /* Un latón más oscuro al pasar el mouse */
+    color: white;
+}
+
+
+/* === MEDIA QUERIES === */
+
+/* Para pantallas de tablet y laptops pequeñas (ancho máximo de 1023px) */
+/** Pantalla: Tablet (max-width: 1023px) **/
+@media (max-width: 1023px) {
+    .contenedor-columnas {
+        grid-template-columns: 1fr; /* Las dos columnas principales se apilan en 1 */
+        border-left: none; /* Quitar bordes laterales cuando se apilan */
+        border-right: none;
+        padding: 0 15px; /* Reducir padding horizontal */
+        gap: 40px; /* Espacio entre la sección Cobre y Latón apiladas */
+    }
+
+    .columna {
+        padding: 0; /* Quitar padding horizontal de las columnas apiladas */
+        border-right: none; /* Asegurar que no haya borde derecho residual */
+    }
+
+    .columna:not(:last-child) {
+        border-right: none; /* Asegurar que no haya borde derecho residual */
+        border-bottom: 2px solid #ccc; /* Añadir un borde inferior entre secciones apiladas */
+        padding-bottom: 30px; /* Espacio antes del borde inferior */
+        margin-bottom: 30px; /* Espacio después del borde inferior */
+    }
+
+    .productos-grid-interno {
+        grid-template-columns: 1fr 1fr; /* Sigue siendo 2 columnas para productos dentro de cada sección */
+        gap: 20px; /* Ajustar gap */
+    }
+
+    .producto {
+        max-width: 250px; /* Ajustar el tamaño máximo del producto para que quepan */
+        padding: 10px;
+    }
+
+    .img-hexagonal1,
+    .img-hexagonal2 {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Para pantallas de celular (ancho máximo de 767px) */
+/** Pantalla: Celular (max-width: 767px) **/
+@media (max-width: 767px) {
+    .catalogo {
+        padding: 30px 2%; /* Reducir padding general */
+    }
+
+    .contenedor-columnas {
+        padding: 0 10px; /* Reducir aún más el padding horizontal */
+        gap: 30px; /* Espacio entre secciones apiladas */
+    }
+
+    .columna h3 {
+        font-size: 1.3rem; /* Reducir tamaño del título */
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+    }
+
+    .productos-grid-interno {
+        grid-template-columns: 1fr; /* Los productos se apilan en 1 columna */
+        gap: 20px;
+    }
+
+    .producto {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 300px; /* Limitar el ancho máximo para productos individuales en móvil */
+        margin: 0 auto; /* Centrar el producto */
+        padding: 15px;
+    }
+
+    .img-hexagonal1,
+    .img-hexagonal2 {
+        width: 160px; /* Ajustar tamaño de imagen para móviles */
+        height: 160px;
+    }
+
+    .producto p {
+        font-size: 0.95rem; /* Ajustar tamaño de fuente del nombre del producto */
+    }
+
+    .link-ficha-cobre,
+    .link-ficha-laton {
+        font-size: 0.75rem; /* Ajustar tamaño de fuente del enlace */
+        padding: 7px 12px;
+    }
+}
+
+/* Para pantallas de celular muy pequeñas (ancho máximo de 480px) */
+/** Pantalla: Celular pequeño (max-width: 480px) **/
+@media (max-width: 480px) {
+    .catalogo {
+        padding: 20px 1%;
+    }
+
+    .contenedor-columnas {
+        padding: 0 5px;
+        gap: 25px;
+    }
+
+    .columna h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .producto {
+        padding: 10px;
+    }
+
+    .img-hexagonal1,
+    .img-hexagonal2 {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+
+/* Formulario */
+.formulario-catalogo {
+  margin-top: 50px;
+  text-align: center;
+
+}
+
+.formulario-catalogo h3 {
+  font-size: 1.5rem;
+  color: #b87333;
+  margin-bottom: 20px;
+
+}
+
+.formulario-catalogo form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 2px solid #b87333;
+}
+
+.formulario-catalogo input,
+.formulario-catalogo textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.formulario-catalogo button {
+  background-color: #b87333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-catalogo button:hover {
+  background-color: #bfa14a;
+}
+
+
+
+
+/* Modal */
+
+/* MODAL PRODUCTO */
+
+#modalProducto.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+}
+
+#modalProducto.activo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido interno */
+#modalProducto .modal-contenido {
+  background-image: url("imagenes/fondo\ trama.jpg");
+  background-size: cover;
+  padding: 30px;
+  border-radius: 10px;
+  width: 800px;
+  max-width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+/* Cuerpo del modal */
+#modalProducto .modal-body {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+/* Imagen */
+#modalProducto .modal-img img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Texto */
+#modalProducto .modal-texto {
+  flex: 2;
+  font-size: 16px;
+  color: #444;
+}
+
+#modalProducto .modal-texto p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Título */
+#modalProducto .modal-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #009933;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #modalProducto .modal-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #modalProducto .modal-texto p {
+    width: 100%;
+  }
+
+  #modalProducto .modal-img img {
+    max-width: 100%;
+  }
+}
+
+
+
+/*Novedades------------------------------------------------------------------------*/
+.empresa-video-carousel3 {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.carousel3 {
+  display: flex;
+  width: 400%; /* 4 videos */
+  height: 100%;
+  animation: slideVideos 20s infinite;
+}
+
+.carousel3 video {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.empresa-overlay3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  max-width: 800px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+.novedades-hero {
+  position: relative;
+  background-image: url('./imagenes/contacto.jpg'); /* Cambia la ruta por la imagen que quieras usar */
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 0px;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.novedades-hero .content {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+.novedades-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.novedades-hero p1 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6); /* más opacidad */
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: inline-block;
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .novedades-hero {
+    height: 180px;
+  }
+  .novedades-hero h1 {
+    font-size: 2rem;
+  }
+  .novedades-hero p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #DD6840;
+  margin: 40px 0 20px;
+}
+
+.novedades {
+  padding: 0 5%;
+}
+
+.novedades-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.novedad {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.novedad:hover {
+  transform: translateY(-4px);
+}
+
+.novedad img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.novedad .info {
+  padding: 15px;
+}
+
+.novedad .info span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.novedad .info h3 {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #8b4513;
+}
+
+.novedad .info p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .novedades-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .novedades-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Modal */
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 60px; height: 80px;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      height: 50%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 30px;
+      font-weight: bold;
+      color: #666;
+      cursor: pointer;
+    }
+    .modal-body {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      width: 100%;
+    }
+    .modal-img {
+      width: 45%;
+      height: 100%;
+      text-align: center;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .modal-texto {
+      width: 55%;
+    }
+    .modal-texto h3 {
+      color: #0033a0;
+      margin-bottom: 10px;
+    }
+    .modal-texto p {
+      font-size: 1rem;
+      color: #444;
+    }
+    /* Responsive Modal */
+    @media screen and (max-width: 700px) {
+      .modal-content {
+        flex-direction: column;
+      }
+      .modal-img, .modal-texto {
+        width: 100%;
+      }
+    }
+
+
+
+/*CONTACTO----------------------------------------------------------------------*/
+
+/* Contenedor principal de la sección */
+.seccion-contacto {
+  display: flex;
+  width: 100%;
+  height: 400px; /* altura fija como la imagen que mostraste */
+  position: relative;
+  color: white;
+  overflow: hidden;
+}
+
+/* Fondo con imagen en la mitad izquierda */
+.seccion-contacto::before {
+  content: "";
+  background-image: url('imagenes/contacto persona.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+/* Video en la mitad derecha */
+.video-derecha {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.video-derecha video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Contenido sobre el video */
+.contenido-superior {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  margin-left: 40%; /* desplaza el contenido a la mitad derecha */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.4); /* fondo semitransparente para contraste */
+  text-align: center;
+}
+
+/* Título */
+.titulo-contacto {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #8b4513;
+  background-color: rgba(0, 0, 0, 0.6); /* más opacidad */
+
+}
+
+/* Carrusel */
+.carrusel-frases {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 50px;
+  margin: 20px auto 0;
+  overflow: hidden;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6); /* más opacidad */
+  justify-content: center;
+  align-items: center;
+}
+
+.frase {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.4;
+  padding: 0 20px;
+}
+
+.frase.visible {
+  opacity: 1;
+  position: relative;
+}
+
+.contacto-header {
+  background-color: #1f2a3a;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contacto-formulario-bloque {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+
+}
+
+.formulario {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.formulario h2 {
+  color: #8b4513;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario input,
+.formulario textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formulario button {
+  padding: 12px;
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sumate {
+  flex: 1 1 300px;
+  max-width: 400px;
+  position: relative;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sumate img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sumate-texto {
+  padding: 15px;
+  text-align: center;
+}
+
+.sumate-texto h3 {
+  margin: 10px 0;
+  color: #8b4513;
+}
+
+.boton-cv {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 10px 16px;
+  background-color: #8b4513;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.contacto-ubicaciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  gap: 40px;
+}
+
+.planta {
+  flex: 1 1 350px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.planta iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.planta h4 {
+  margin: 10px 0 5px;
+  color: #003366;
+}
+
+
+/*emergente de contacto*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.modal-contenido h3 {
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+.imagen-modal {
+  width: 350px;
+  height: 150px;
+  margin-bottom: 15px;
+}
+
+.boton-modal {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #00c0c6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.boton-modal:hover {
+  background-color: #009ba0;
+}
+
+
+
+
+
+
+
+
+
+/*Talento humano-----------------------------------------------------------------*/
+
+.cv-header {
+  background-image: url('imagenes/RRHH.png');
+  background-size: cover;
+  background-position: center 30%;
+  height: 400px;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+
+}
+
+.cv-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+
+}
+
+.cv-header-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* más opacidad */
+}
+
+.cv-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #DD6840;
+}
+
+.cv-header p {
+  font-size: 18px;
+}
+
+/* Sección de formulario + imagen */
+.cv-form-section {
+  padding: 40px 20px;
+
+}
+
+.formulario-contenedor {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+/* Formulario */
+.formulario-cv {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fila-doble {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Área de carga estilo dropzone */
+.dropzone {
+  border: 2px dashed #ccc;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropzone input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.dropzone-text .icon {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dropzone-text p {
+  font-size: 15px;
+  color: #555;
+  margin: 0;
+}
+
+/* Botón */
+.boton-enviar {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+  background-color: #DD6840;
+}
+
+/* Imagen a la derecha */
+.imagen-lateral {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+.imagen-lateral img {
+ width: 600px;
+  height: 400px; /* Elegí el alto que necesites */
+  object-fit: cover;
+  object-position: center ; /* Mostrar más de la parte superior */
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+
+
+
+.menu-toggle {
+  display: none;
+}
+
+/* Solo para móviles */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .menu-toggle {
+    display: block; /* mostrar solo en móvil */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .navbar {
+    width: 100%;
+    background: none;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    display: none; /* oculto por defecto */
+    background-color: #222;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu li {
+    padding: 10px 0;
+    border: none;
+  }
+
+  .menu a {
+    font-size: 14px;
+    color: white;
+  }
+}
